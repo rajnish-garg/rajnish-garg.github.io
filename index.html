@@ -289,6 +289,16 @@
 
   
   function getHtmlForAsset(parsedData) {
+    
+    return `
+    <div class="parsed_data">
+      <pre>
+        <code>
+          ${JSON.stringify(parsedData, null, 4)}
+        </code>
+      </pre>
+    </div>
+    `
 
     return `
       <a class="asset" href="https://admin.airbnb.com/rooms/${parsedData.id_listing}" target="_blank">
